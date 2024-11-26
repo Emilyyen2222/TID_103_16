@@ -60,7 +60,7 @@ body {
 
 .nav-menu a {
     text-decoration: none !important;
-    color: #3A2513; /* 改為深色，因為背景是白色 */
+    color: #3A2513; 
     font-size: 16px;
     font-weight: 500;
 }
@@ -137,17 +137,17 @@ body {
     color: #F9A726 !important;
 }
 
-/* Logo 樣式 */
+/* Logo */
 .logo-container {
     position: fixed;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-51%);
     margin-top: 5px;
     z-index: 100; 
 }
 
 .logo-container img {
-    height: 70px; /* 根據實際 logo 大小調整 */
+    height: 70px; 
     /* width: auto; */
 }
 
@@ -280,11 +280,11 @@ body {
     background-color: #e89615;
 }
 
-/* 搜尋icon樣式 */
+/* 搜尋icon */
 .search-btn i {
-    font-size: 20px; /* 調整圖標大小 */
-    width: 20px; /* 確保寬度固定 */
-    height: 20px; /* 確高度固定 */
+    font-size: 20px; 
+    width: 20px; 
+    height: 20px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -596,8 +596,8 @@ body {
 
 /* Latest Reviews Section */
 .latest_review_section {
-    max-width: 1000px;  /* 調整最大寬度 */
-    margin: 0 auto;     /* 改為 auto 來自動置中 */
+    max-width: 1000px;  
+    margin: 0 auto;    
     padding: 56px 20px;
     text-align: center;
 }
@@ -608,7 +608,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 56px;
-    text-align: left;  /* 確保標題靠左對齊 */
+    text-align: left; 
 }
 
 .review-header h1 {
