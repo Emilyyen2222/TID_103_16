@@ -692,13 +692,14 @@ body {
 .review-image {
     width: 100%;
     border-radius: 8px;
-    margin: 10px 0;
+    margin: 10px auto;
+    display: block;
 }
 
 .review-text {
     font-size: 0.9em;
     color: #555;
-    margin: 10px 0;
+    margin: 10px auto;
 }
 
 .read-more {
