@@ -1031,7 +1031,7 @@ footer .footer-links a:hover {
 }
 
 .filter-label {
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
     color: #3A2513;
     margin-bottom: 10px;
@@ -1045,8 +1045,8 @@ footer .footer-links a:hover {
 }
 
 .rating-button {
-    width: 100px;
-    padding: 8px 8px;
+    width: 140px;
+    padding: 2px 2px;
     background-color: transparent;
     border: 2px solid #F9A726;
     color: #F9A726;
@@ -1068,7 +1068,7 @@ footer .footer-links a:hover {
 }
 
 .category-button {
-    padding: 8px 16px;
+    padding: 4px 8px;
     background-color: transparent;
     border: 2px solid #F9A726;
     color: #F9A726;
@@ -1101,12 +1101,40 @@ footer .footer-links a:hover {
 
 .features-filter label {
     font-size: 14px;
-    color: #3A2513;
+    color: #F9A726;
 }
 
 input[type="checkbox"] {
     margin-right: 8px;
+    -webkit-appearance: none; /* 去除瀏覽器預設樣式 */
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #F9A726; /* 邊框顏色 */
+    border-radius: 5px; /* 圓角 */
+    background-color: white; /* 背景顏色 */
+    position: relative;
+    cursor: pointer;
 }
+
+/* 當選中時的樣式 */
+input[type="checkbox"]:checked {
+    background-color: #F9A726; /* 選中時的背景顏色 */
+    border-color: #F9A726; /* 選中時的邊框顏色 */
+}
+
+/* 當選中時，顯示勾選符號 */
+input[type="checkbox"]:checked::before {
+    content: '\2713'; /* 勾選符號 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* 勾選符號的顏色 */
+    font-size: 16px;
+}
+
 
 /* 中間搜尋結果區 ************************************/
 .dessert-shops {
@@ -1174,7 +1202,7 @@ h1 {
     padding: 5px 12px;
     border-radius: 20px;
     border: none;
-    font-size: 14px;
+    font-size: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -1271,6 +1299,7 @@ footer .footer-links a:hover {
 
 .main-content {
     display: flex;
+    /* height: 500px; */
     gap: 20px;
     padding: 20px;
     margin-top: 120px; /* header 高度 */
@@ -1280,10 +1309,11 @@ footer .footer-links a:hover {
 .filters {
     width: 200px;
     flex-shrink: 0;
-    margin-top: 0; /* 移除原有的 margin-top */
-    margin-right: 80px;
+    margin-top: 0; 
+    /* margin-right: px; */
     height: calc(100vh - 120px);
     overflow-y: auto;
+    /* 當內容超過容器的高度時，會啟用垂直滾動條 */
     position: sticky;
     top: 100px;
 }
