@@ -218,12 +218,14 @@ body {
     z-index: 1;
 }
 
-.right-side img {
+/* .right-side img {
     max-width: 75%;
     height: auto;
     position: relative;
     right: 180px;
-}
+    opacity: 0.5;
+
+} */
 
 /* The overlay text on the left side */
 .overlay-text {
@@ -333,13 +335,13 @@ body {
 }
 
 
-/* 輪播器樣式 */
+/* 輪播器 */
 .slider {
     position: relative;
     width: 100%;
     height: 500px;
     overflow: hidden;
-    border-radius: 40px;
+    border-radius:40px;
     margin-left: -200px;  /* 向左移動 50px */
     /* 或者使用 transform */
     /* transform: translateX(-50px); */
@@ -357,7 +359,7 @@ body {
     height: 100%;
     object-fit: cover;
     position: relative;
-    right: 180px;
+    right: 150px;
     border-radius: 40px;
 }
 
@@ -598,7 +600,7 @@ body {
 .latest_review_section {
     max-width: 1000px;  
     margin: 0 auto;    
-    padding: 56px 20px;
+    padding: 64px 20px;
     text-align: center;
 }
 
@@ -607,7 +609,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 56px;
+    margin-bottom: 32px;
     text-align: left; 
 }
 
@@ -626,18 +628,20 @@ body {
 /* Review Grid */
 .review-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 改用 grid 布局，每行3個 */
+    grid-template-columns: repeat(4, 1fr);  /* 改用 grid 布局，每行3個 */
     gap: 20px;
 }
 
 .review-card {
-    width: 90%;  /* 讓卡片填滿網格空間 */
+    width: 100%;  /* 讓卡片填滿網格空間 */
 }
 
 .review-item {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(249, 167, 38, 0.6);
+    background-color: #FCDC94;
+    border-radius: 16px;
+    /* border: 8px solid #FCDC94; */
+    /* box-sizing: border-box; */
+    /* box-shadow: -5px 5px 5px 5px rgba(249, 167, 38, 0.8); */
     padding: 15px;
 }
 
@@ -667,7 +671,7 @@ body {
 .post-time {
     font-size: 0.6em;
     color: #3A2513;
-    margin-top: 4px;
+    margin-top: 8px;
 }
 
 /* Review Content */
@@ -678,7 +682,7 @@ body {
 
 .review-content h2 {
     font-size: .9em;
-    margin: 0 0 10px 0;
+    margin: 0 0 6px 0;
 }
 
 .rating {
@@ -765,7 +769,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 56px;
+    margin-bottom: 32px;
     text-align: left;
 }
 
@@ -839,7 +843,7 @@ body {
     background-color: #FCDC94; 
     padding: 60px 20px;
     margin-top: 120px;
-    margin-bottom: 20vh;
+    margin-bottom: 15vh;
     text-align: center;
 }
 
