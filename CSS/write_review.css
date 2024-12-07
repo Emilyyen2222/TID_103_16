@@ -1,0 +1,64 @@
+.review-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.review-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.rating-system {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.rating-system input {
+    display: none; /* 隱藏原始的 radio 按鈕 */
+}
+
+.rating-system label {
+    font-size: 24px;
+    color: #ccc; /* 星星的顏色 */
+    cursor: pointer;
+}
+
+.rating-system input:checked ~ label {
+    color: #f9a726; /* 選中的星星顏色 */
+}
+
+.submit-btn {
+    background-color: #f9a726;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #e89615;
+}

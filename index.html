@@ -8,46 +8,55 @@
      <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
 
      <link rel="stylesheet" href="CSS/style.css">
-     
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/swiper-bundle.css">
+    <link rel="stylesheet" href="CSS/test.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="Js/button_up.js" defer></script>
-    <script src="Js/slider.js" defer></script>
+    <!-- <script src="Js/slider.js" defer></script> -->
+    <script src="Js/hamburger.js" defer></script>
+    <script src="Js/swiper-bundle.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="header-container">
-            <!-- 左半邊導航選單 -->
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="index.html">cinnamon rolls</a></li>
-                    <li><a href="index.html">cheese cakes</a></li>
-                    <li><a href="index.html">ice creams</a></li>
-                    <li><a href="index.html">cafes</a></li>
+                        <li><a href="index.html">cinnamon rolls</a></li>
+                        <li><a href="index.html">cheese cakes</a></li>
+                        <li><a href="index.html">ice creams</a></li>
+                        <li><a href="index.html">cafes</a></li>
+                        <li><a href="review.html">write a review</a></li>
+                        <li>
+                            <a href="https://www.instagram.com/cupertino.keki/" class="brand-name">
+                                cupertino.keki
+                                <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
+                            </a>
+                        </li>
                 </ul>
             </nav>
 
-            <!-- Logo 置中 -->
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="./img/11211.svg" alt="Sugar.Topia">
+                    <img src="./img/1207.svg" alt="Sugar.Topia">
                 </a>
             </div>
 
-            <!-- 右半邊操作區域 -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
             <div class="actions">
-                <a href="review.html">write a review</a>
-                <a href="https://www.instagram.com/cupertino.keki/" class="brand-name">
-                    cupertino.keki
-                    <i class="fa-solid fa-arrow-up-right-from-square link-icon"></i>
-                </a>
                 <a href="login.html" class="btn-login">Log In</a>
                 <a href="signup.html" class="btn-signup">Sign Up</a>
+                <button class="login_avatar" onclick="location.href='login.html';">
+                    <i class="fa-regular fa-user"></i>
+                </button>
+
             </div>
         </div>
     </header>
-    
-    
 
     <section class="split-section">
         <div class="left-side">
@@ -66,7 +75,24 @@
                 <a href="aboutus.html"><img src='./img/icon.svg' alt="Sugar.Topia Logo"></a>
             </div>
         </div>
-        <div class="right-side">
+         <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/nathan-dumlao-pJllO6r0pKo-unsplash.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/natasha-levai-YVsFV0E-CGo-unsplash.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/rens-d-6LTAljmu2cY-unsplash.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/lp.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/theo-crazzolara-BpcTCHoruSo-unsplash.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/rens-d-6LTAljmu2cY-unsplash.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/yana-gorbunova-usM1_4RAiVE-unsplash.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/rens-d-6LTAljmu2cY-unsplash.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/rens-d-6LTAljmu2cY-unsplash.jpg" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- <div class="right-side">
             <div class="slider">
                 <div class="slides">
                     <img src="./img/lp.jpg" alt="Dessert 1" class="slide">
@@ -75,9 +101,9 @@
                     <img src="./img/nathan-dumlao-pJllO6r0pKo-unsplash.jpg" alt="Dessert 4" class="slide">
                     <img src="./img/natasha-levai-YVsFV0E-CGo-unsplash.jpg" alt="Dessert 5" class="slide">
                     <img src="./img/slide2.jpg" alt="Dessert 6" class="slide">
-                </div>
+                </div> -->
                 <!-- &#10094左箭頭, &#10095 -->
-                <button class="slider-btn prev">&#10094;</button>
+                <!-- <button class="slider-btn prev">&#10094;</button>
                 <button class="slider-btn next">&#10095;</button>
                 <div class="dots">
                     <span class="dot active"></span>
@@ -88,7 +114,7 @@
                     <span class="dot"></span>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
 <!-- latest reviews ---------------------------------------------->
@@ -394,6 +420,25 @@
     </div>
 </footer>
 
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 
 </body>
 </html>

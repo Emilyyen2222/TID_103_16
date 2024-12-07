@@ -1,7 +1,12 @@
 @import url("reset.css");
 
+html {
+    font-size: clamp(1rem, 2vw, 3rem);
+}
+
 body {
     font-family: poppins;
+    font-size: 1rem;
 }
 
 /* 頁面頂部 header */
@@ -14,6 +19,7 @@ body {
     left: 0;
     display: flex;
     z-index: 1000;
+    font-size: 1rem;
 }
 
 /* 左半邊 */
@@ -48,12 +54,13 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: 1; /* 確保內容在背景色之上 */
+    z-index: 1; /* 內容在背景色之上 */
 }
 
 /* 左側導航選單 */
 .nav-menu ul {
-    display: flex;z-index: 1; 
+    display: flex;
+    z-index: 1; 
     list-style: none;
     gap: 30px;
 }
@@ -61,13 +68,15 @@ body {
 .nav-menu a {
     text-decoration: none !important;
     color: #3A2513; 
-    font-size: 16px;
+    font-size: 0.55rem;
     font-weight: 500;
 }
 .nav-menu a:hover {
     color: #F9A726;
 }
-
+.nav-menu ul li:nth-of-type(4){
+    margin-right: 8.6rem;
+}
 /* 右側操作區域 */
 .actions {
     display: flex;
@@ -77,7 +86,7 @@ body {
 .actions a {
     color: white; 
     text-decoration: none !important;
-    font-size: 16px;
+    font-size: 0.55rem;
     font-weight: 500;
 }
 
@@ -94,28 +103,26 @@ body {
 .actions .btn-login {
     margin-right: 4px;
     margin-left: 20px;
+    /* display: flex; */
+}
+.action .btn-signup{
+    display: flex;
 }
 
 .actions .btn-login:hover {
     background-color: #FCDC94;
 }
 
-.brand-name {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    text-decoration: none !important;
-}
 
 .link-icon {
-    font-size: 12px;
+    font-size: 0.4rem;
 }
 
 .btn-login, .btn-signup {
     padding: 8px 16px;
     border-radius: 9px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 0.5rem;
     text-decoration: none;
     display: inline-block;
 }
@@ -142,13 +149,13 @@ body {
     position: fixed;
     left: 50%;
     transform: translateX(-51%);
-    margin-top: 5px;
+    margin-top: clamp(2px, 0.2vw, 5px);
     z-index: 100; 
 }
 
 .logo-container img {
-    height: 70px; 
-    /* width: auto; */
+    height: clamp(32px, 10vw, 70px);
+    width: auto;
 }
 
 /* 調整 header container 確保不會擋住 logo */
@@ -157,7 +164,6 @@ body {
     /* padding-bottom: 10px; */
     z-index: 10;
 }
-
 /* Split section */
 .split-section {
     display: flex;
@@ -218,18 +224,11 @@ body {
     z-index: 1;
 }
 
-/* .right-side img {
-    max-width: 75%;
-    height: auto;
-    position: relative;
-    right: 180px;
-    opacity: 0.5;
 
-} */
 
 /* The overlay text on the left side */
 .overlay-text {
-    font-size: 36px;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #3A2513;
     margin-bottom: 20px;
@@ -238,6 +237,7 @@ body {
     margin-left: 10px;
     /* padding-left: 10px; */
 }
+
 
 /* Search bar container */
 .search-bar {
@@ -254,7 +254,7 @@ body {
     padding: 0px 16px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 0.5rem;
     flex: 1;
     outline: none;
 }
@@ -284,7 +284,7 @@ body {
 
 /* 搜尋icon */
 .search-btn i {
-    font-size: 20px; 
+    font-size: 0.7rem; 
     width: 20px; 
     height: 20px; 
     display: flex;
@@ -314,7 +314,7 @@ body {
 }
 
 .social-icons a i {
-    font-size: 40px;
+    font-size: 1.3rem;
     color: #F9A726; 
     display: block; 
 }
@@ -336,55 +336,53 @@ body {
 
 
 /* 輪播器 */
-.slider {
+/* .slider {
     position: relative;
     width: 100%;
     height: 500px;
     overflow: hidden;
     border-radius:40px;
-    margin-left: -200px;  /* 向左移動 50px */
-    /* 或者使用 transform */
-    /* transform: translateX(-50px); */
+    margin-left: -200px; 
     margin-top: 60px;
-}
-
+} */
+/* 
 .slides {
     display: flex;
     transition: transform 0.3s ease-in-out;
     height: 100%;
-}
+} */
 
-.slide {
+/* .slide {
     min-width: 100%;
     height: 100%;
     object-fit: cover;
     position: relative;
     right: 150px;
     border-radius: 40px;
-}
+} */
 
-.slider-btn {
+/* .slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;  /* 設定固定寬度 */
-    height: 40px;  /* 設定固定高度，與寬度相等 */
-    padding: 0;  /* 移除內距 */
+    width: 30px; 
+    height: 30px; 
+    padding: 0;  
     border: none;
     cursor: pointer;
     border-radius: 50%;
-    background: transparent;  /* 透明背景 */
-    border: 2px solid #FFF;  /* 加入邊框 */
+    background: transparent;  
+    border: 2px solid #FFF;  
     color: #Fff;
-    font-size: 16px;
+    font-size: 0.5rem;
     z-index: 10;
-    display: flex;  /* 使用 flex 置中內容 */
+    display: flex;  
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
-}
+} */
 
-.slider-btn:hover {
+/* .slider-btn:hover {
     background: rgba(249, 167, 38, 0.1);
 }
 
@@ -394,9 +392,9 @@ body {
 
 .next {
     right: 20px;
-}
+} */
 
-.dots {
+/* .dots {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -412,18 +410,17 @@ body {
     background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: background 0.3s;
-}
+} */
 
-.dot.active {
+/* .dot.active {
     background: #F9A726;
-}
-
+} */
 
 /* Join Mailing List Section */
 .join-mailing-list {
     background-color: #FCDC94;
-    padding: 100px 0;
-    margin: 80px;
+    padding: 2rem 0;
+    margin: clamp(40px, 5vw, 80px);
     border-radius: 30px;
     position: relative;
     overflow: hidden;
@@ -455,8 +452,8 @@ body {
 .image-container {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* 改為靠右對齊 */
-    margin-right: 50px; /* 向右移動 */
+    justify-content: center; 
+    margin-right: clamp(5px, 0.5vw, 10px); 
     position: relative; /* 確保定位正確 */
 }
 
@@ -471,7 +468,7 @@ body {
 /* 文字容器 */
 .text-container {
     flex: 1;
-    margin-left: -15px; /* 向左移動 */
+    /* margin-left: -15px;  */
 }
 
 .image-decoration {
@@ -495,12 +492,12 @@ body {
     color: white;
     padding: 6px 12px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 0.5rem;
     margin-bottom: 15px;
 }
 
 .text-wrapper h2 {
-    font-size: 36px;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #3A2513;
     margin-bottom: 20px;
@@ -522,6 +519,7 @@ body {
     padding: 5px 15px;
     display: flex;
     align-items: center;
+    width: 0.5rem;
 }
 
 .input-wrapper i {
@@ -534,7 +532,7 @@ body {
     outline: none;
     padding: 12px 0;
     width: 100%;
-    font-size: 16px;
+    font-size: 0.6rem;
 }
 
 .subscribe-btn {
@@ -546,7 +544,7 @@ body {
     border: none;
     padding: 15px 30px;
     border-radius: 12px;
-    font-size: 16px;
+    font-size: 0.875rem;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 4px;
@@ -580,21 +578,7 @@ body {
     font-size: 14px;
 }
 
-@media (max-width: 768px) {
-    .mailing-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .text-wrapper {
-        align-items: center;
-    }
-    
-    .image-wrapper {
-        margin-right: 0;
-        margin-bottom: 40px;
-    }
-}
+
 
 /* Latest Reviews Section */
 .latest_review_section {
@@ -602,6 +586,7 @@ body {
     margin: 0 auto;    
     padding: 64px 20px;
     text-align: center;
+    font-size: 1rem;
 }
 
 /* Header */
@@ -615,14 +600,14 @@ body {
 
 .review-header h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 1rem;
     font-weight: bold;
 }
 
 .review-view-all {
     color: #f9a726;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 0.7rem;
 }
 
 /* Review Grid */
@@ -664,12 +649,13 @@ body {
 }
 
 .user-name {
+    font-size: 0.5rem;
     font-weight: bold;
     margin: 0;
 }
 
 .post-time {
-    font-size: 0.6em;
+    font-size: 0.4em;
     color: #3A2513;
     margin-top: 8px;
 }
@@ -681,16 +667,20 @@ body {
 }
 
 .review-content h2 {
-    font-size: .9em;
+    font-size: 0.5rem;
     margin: 0 0 6px 0;
+    font-weight: bold;
 }
 
 .rating {
     margin-bottom: 10px;
+    font-size: 1rem;
+    
 }
 
 .rating span {
     color: #5A8F29;
+    font-size: x-small;
 }
 
 .review-image {
@@ -701,7 +691,7 @@ body {
 }
 
 .review-text {
-    font-size: 0.9em;
+    font-size: 0.6em;
     color: #555;
     margin: 10px auto;
 }
@@ -709,26 +699,7 @@ body {
 .read-more {
     color: #5A8F29;
     text-decoration: none;
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .latest_review_section {
-        margin: 0 auto;  /* 在較小螢幕上置中 */
-        padding: 56px 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .review-grid {
-        grid-template-columns: repeat(2, 1fr);  /* 平板上每行2個 */
-    }
-}
-
-@media (max-width: 480px) {
-    .review-grid {
-        grid-template-columns: 1fr;  /* 手機上每行1個 */
-    }
+    font-size: 0.6rem;
 }
 
 /* 新增：標題區域的樣式 */
@@ -775,7 +746,7 @@ body {
 
 .category-header h2 {
     margin: 0;
-    font-size: 24px;
+    font-size: 1rem;
     font-weight: bold;
     color: #3A2513;
 }
@@ -783,7 +754,7 @@ body {
 .category-view-all {
     color: #F9A726;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 0.7rem;
 }
 
 .category-view-all:hover {
@@ -802,9 +773,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;  /* 添加內邊距 */
-    transition: all 0.3s ease;  /* 添加過渡效果 */
-    border-radius: 16px;  /* 添加圓角 */
+    padding: 10px;  
+    transition: all 0.3s ease;  
+    border-radius: 16px;  
 }
 
 .category-card img {
@@ -825,19 +796,6 @@ body {
     transform: scale(0.95);  /* 圖片稍微縮小 */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .category-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
 /* Instagram Section */
 .instagram_photo_section {
     background-color: #FCDC94; 
@@ -854,12 +812,12 @@ body {
 
 .instagram-container h2 {
     color: #fff;
-    font-size: 28px;
+    font-size: 0.8rem;
     margin-bottom: 10px;
 }
 
 .instagram-container p {
-    font-size: 20px;
+    font-size: 0.6rem;
     color: #fff;
     margin: 10px 0;
 }
@@ -894,33 +852,20 @@ body {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 0.6rem;
     cursor: pointer;
     text-decoration: none; /* 移除連結底線 */
     transition: all 0.3s ease;
 }
 
 .instagram-follow-btn i {
-    font-size: 18px;
+    font-size: 0.6rem;
 }
 
 .instagram-follow-btn:hover {
     background-color: #FCDC94;
     color: #fff;
     transform: translateY(-2px);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .instagram-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .instagram-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 /* button up */
@@ -943,7 +888,7 @@ body {
 }
 
 .scroll-to-top-btn i {
-    font-size: 20px;
+    font-size: 0.8rem;
 }
 
 /* 懸停效果 */
@@ -975,7 +920,7 @@ footer {
 
 footer p {
     color: white;
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-bottom: 10px;
 }
 
@@ -987,7 +932,7 @@ footer .footer-links a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
-    font-size: 14px;
+    font-size: 0.875rem;
     text-align: center;
     display: inline-block;
 }
@@ -999,7 +944,7 @@ footer .footer-links a:hover {
 .footer_social-icons a {
     color: white;
     margin: 0 10px;
-    font-size: 18px;
+    font-size: 0.6rem;
     text-align: center;
     display: inline-block;
 }
@@ -1023,7 +968,7 @@ footer .footer-links a:hover {
 }
 
 .filter-title {
-    font-size: 20px;
+    font-size: 0.7rem;
     font-weight: bold;
     color: #3A2513;
     margin-bottom: 20px;
@@ -1176,19 +1121,19 @@ h1 {
 }
 
 .shop-details h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     color: #3A2513;
     margin-bottom: 10px;
 }
 
 .rating {
-    font-size: 16px;
+    font-size: 1rem;
     color: #F9A726;
 }
 
 .rating-score {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #777;
     margin-left: 10px;
 }
@@ -1216,7 +1161,7 @@ h1 {
 }
 
 .description {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #333;
     margin: 10px 0;
 }
@@ -1345,10 +1290,11 @@ footer .footer-links a:hover {
 /* 新的訂閱表單容器 */
 .subscribe-form {
     display: flex;
-    flex-direction: row; /* 確保水平排列 */
+    flex-direction: row; 
     align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 0.2rem;
+    margin-bottom: 1rem; 
+    flex-wrap: wrap;
 }
 
 .input-wrapper {
@@ -1372,7 +1318,7 @@ footer .footer-links a:hover {
     background: transparent;
     width: 100%;
     height: 100%;
-    font-size: 16px;
+    font-size: 0.65rem;
 }
 
 .subscribe-btn {
@@ -1395,3 +1341,201 @@ footer .footer-links a:hover {
     background: #e89615;
     transform: translateY(-2px);
 }
+
+/* 漢堡選單 */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin: 4px 0;
+}
+.search_bar_rwdshow{
+    z-index: 10000;
+}
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .mailing-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .text-wrapper {
+        align-items: center;
+    }
+    
+    .image-wrapper {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .latest_review_section {
+        margin: 0 auto;  /* 在較小螢幕上置中 */
+        padding: 56px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .review-grid {
+        grid-template-columns: repeat(2, 1fr);  /* 平板上每行2個 */
+    }
+}
+
+@media (max-width: 480px) {
+    .review-grid {
+        grid-template-columns: 1fr;  /* 手機上每行1個 */
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .category-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* 螢幕寬度小於1024px時顯示漢堡選單 */
+@media (max-width: 1380px) {
+    .nav-menu {
+        display: none; 
+    }
+
+    .menu-toggle {
+        display: flex; 
+    }
+
+    .nav-menu.active {
+        display: flex; 
+        flex-direction: column; 
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        background-color: white; 
+        width: 50%; 
+        z-index: 1000; 
+        padding: 10px 0; 
+    }
+
+    .nav-menu ul {
+        padding: 0; 
+        margin: 0; 
+        list-style: none; 
+        
+        display: table-column;
+        /* z-index: 1;  */
+        /* gap: 30px; */
+    }
+
+    .nav-menu li {
+        padding: 10px 20px; 
+    }
+
+    .nav-menu li a {
+        text-decoration: none; 
+        color: #3A2513; 
+        display: block; 
+        font-size: 0.8rem;
+    }
+
+    .nav-menu li a:hover {
+        background-color: #F9A726; 
+        color: white; 
+    }
+}
+
+/* 大於1024px時，顯示原有導航選單 */
+@media (min-width: 1380px) {
+    .menu-toggle {
+        display: none; 
+    }
+
+    .review-links {
+        display: flex; 
+        align-items: center; 
+        gap: 10px; 
+    }
+
+    .review-links li {
+        list-style: none; 
+    }
+
+    .menu-items {
+        display: flex; 
+        justify-content: flex-end; 
+        gap: 20px; 
+    }
+
+    .menu-items li {
+        list-style: none; 
+    }
+}
+
+
+/* 大於1024px時，顯示原有導航選單 */
+@media (width <= 1024px){
+    .btn-login{
+        display:none;
+    }
+    .btn-signup{
+        display: none;
+    }
+}
+
+
+.login_avatar {
+    width: 60px;
+    height: 60px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9A726;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0;
+    color: #3A2513;
+    font-size: 1.1rem;
+    
+}
+
+@media (width <= 1024px){
+    .login_avatar{
+        display: flex;
+    }
+    .left-side{
+        display: none;
+    }
+    
+
+}
+
