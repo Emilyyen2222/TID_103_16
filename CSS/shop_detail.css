@@ -1,11 +1,12 @@
 html {
-    font-size: clamp(1rem, 2vw, 3rem);
+    font-size: clamp(16px, 2vw, 3rem);
 }
 /* 店家詳情頁面基本樣式 */
 .shop-detail {
-    max-width: 1200px;
-    margin: 120px auto 0;
+    max-width: 1100px;
+    margin: 6rem auto 0;
     padding: 0 20px;
+
 }
 
 /* 店家標題區塊 */
@@ -13,40 +14,46 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 0.5rem;
 }
 
 /* 店家資訊區塊樣式更新 */
 .shop-info {
     flex: 1;
-    background-color: #FFF9F0; /* 淺橘色背景 */
+    background-color: #FCDC94;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     position: relative;
     overflow: hidden;
 }
-
-/* 確保內容在漸層上方 */
-.shop-info > * {
-    position: relative;
-    z-index: 1;
+@media (max-width: 430px) {
+    .shop-info {
+        margin: 0 10px; 
+        width: auto;
+    }
 }
-
 .shop-info h1 {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     color: #3A2513;
     margin-bottom: 15px;
 }
 
 .shop-image {
     flex-shrink: 0;
-    width: 300px;
-    background-color: #FFF9F0; /* 與店家資訊區塊相同的背景色 */
+    width: 10rem;
+    background-color: #FCDC94; 
     padding: 15px;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    
 }
-
+@media (max-width: 500px) {
+    .shop-image {
+        margin: 0 auto; 
+        max-width: 80%; 
+    }
+}
 .shop-image img {
     width: 100%;
     height: 250px;
@@ -83,12 +90,12 @@ html {
 
 .stars {
     color: #F9A726;
-    font-size: 0.5rem;
+    font-size: 0.25rem;
 }
 
 .rating-count {
     color: #666;
-    font-size: 0.6rem;
+    font-size: 0.1rem;
 }
 
 .tags {
@@ -101,7 +108,7 @@ html {
     background-color: #f5f5f5;
     padding: 5px 12px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 0.4rem;
     color: #666;
 }
 
@@ -110,7 +117,7 @@ html {
     align-items: center;
     gap: 8px;
     color: #666;
-    font-size: 14px;
+    font-size: 0.2rem;
 }
 
 
@@ -132,14 +139,14 @@ html {
     border-radius: 8px;
     background-color: #F9A726;
     color: white;
-    font-size: 14px;
+    font-size: 0.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap; 
 }
 
 .action-btn i {
-    font-size: 16px;
+    font-size: 0.5rem;
 }
 
 .action-btn:hover {
@@ -159,10 +166,6 @@ html {
     }
 }
 
-/* 照片輪播 */
-.shop-gallery {
-    margin-bottom: 40px;
-}
 
 .main-image {
     width: 100%;
@@ -185,11 +188,57 @@ html {
 
 /* 評論區塊樣式更新 */
 .reviews-section {
-    margin: 60px 0;
-    background: #fff;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    margin: 40px 0;
+}
+
+.reviews-section h2 {
+    font-size: 1rem; 
+    color: #3A2513;
+    margin-bottom: 20px;
+}
+
+.reviews-grid {
+    display: flex;
+    flex-wrap: wrap; /* 允許換行 */
+    gap: 20px; 
+}
+
+/* 評論項目樣式 */
+.review-item {
+    flex: 1 1 calc(33.333% - 20px); /* 三列佈局，減去間距 */
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.review-item:hover {
+    transform: translateY(-5px);
+}
+
+.review-item h4 {
+    font-size: 0.75rem; 
+    color: #3A2513;
+    margin-bottom: 8px;
+}
+
+.review-item p {
+    font-size: 0.625rem; 
+    color: #666;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .review-item {
+        flex: 1 1 calc(50% - 20px); /* 在平板上顯示兩列 */
+    }
+}
+
+@media (max-width: 480px) {
+    .review-item {
+        flex: 1 1 100%; /* 在手機上顯示一列 */
+    }
 }
 
 .reviews-header {
@@ -200,7 +249,7 @@ html {
 }
 
 .reviews-header h2 {
-    font-size: 28px;
+    font-size: 1.25rem;
     color: #3A2513;
     font-weight: 600;
 }
@@ -219,7 +268,7 @@ html {
     border-radius: 30px;
     background: white;
     color: #666;
-    font-size: 14px;
+    font-size: 0.375rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -243,20 +292,6 @@ html {
     display: flex;
     flex-direction: column;
     gap: 30px;
-}
-
-.review-item {
-    display: flex;
-    gap: 30px;
-    padding: 30px;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
-
-.review-item:hover {
-    transform: translateY(-5px);
 }
 
 .reviewer-info {
@@ -379,11 +414,13 @@ html {
 }
 
 .menu-section h2, .vibe-section h2 {
-    font-size: 24px;
+    font-size: 0.8rem;
     color: #3A2513;
     margin-bottom: 20px;
 }
-
+.vibe-section h2{
+    font-size: 0.8rem;
+}
 .menu-grid, .vibe-grid {
     display: flex;
     gap: 20px;
@@ -415,7 +452,7 @@ html {
 }
 
 .item-info h4 {
-    font-size: 16px;
+    font-size: 0.5rem;
     color: #3A2513;
     margin-bottom: 8px;
 }
@@ -424,7 +461,7 @@ html {
     display: flex;
     gap: 15px;
     color: #3A2513;
-    font-size: 14px;
+    font-size: 0.375rem;
 }
 
 /* 響應式設計 */
@@ -456,9 +493,12 @@ html {
     text-decoration: none;
     transition: all 0.3s ease;
 }
-
+.menu-section h3{
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+}
 .pagination .page-number {
-    font-size: 14px;
+    font-size: 0.375rem;
 }
 
 .pagination .page-number.active {
@@ -474,7 +514,7 @@ html {
 
 .pagination .prev-page,
 .pagination .next-page {
-    font-size: 12px;
+    font-size: 0.25rem;
 }
 
 /* 響應式設計 */
@@ -488,7 +528,7 @@ html {
         height: 35px;
     }
 
-    /* 在手機版隱藏部分頁碼 */
+    /* 手機版隱藏部分頁碼 */
     .pagination .page-number:not(.active):not(:first-child):not(:last-child) {
         display: none;
     }
@@ -497,6 +537,7 @@ html {
 
 .business-info{
     color: #3A2513;
+    font-size: 0.55rem;
 }
 .see-hours{
     color: #FFA518;
@@ -550,6 +591,7 @@ h1, h2, h3, h4, h5, h6 {
 /* 評論區塊 */
 .reviews-section h2 {
     color: #3A2513;
+    font-size: 0.8rem;
 }
 
 .reviewer-details h4 {
@@ -578,4 +620,114 @@ h1, h2, h3, h4, h5, h6 {
 .review-actions button.active,
 .pagination .page-number.active {
     color: white; 
+}
+
+/* 菜單區塊樣式 */
+.menu-section {
+    margin: 40px 0;
+}
+
+.menu-section h2 {
+    font-size: 1rem;
+    color: #3A2513;
+    margin-bottom: 20px;
+}
+
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap; /* 允許換行 */
+    gap: 20px; 
+}
+
+/* 菜單項目樣式 */
+.menu-item {
+    flex: 1 1 calc(33.333% - 20px); /* 三列佈局，減去間距 */
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item-info {
+    padding: 15px;
+}
+
+.item-info h4 {
+    font-size: 0.5rem; 
+    color: #3A2513;
+    margin-bottom: 8px;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .menu-item {
+        flex: 1 1 calc(50% - 20px); /* 在平板上顯示兩列 */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item {
+        flex: 1 1 100%; /* 在手機上顯示一列 */
+    }
+}
+
+/* What's the Vibe 區塊樣式 */
+.vibe-section {
+    margin: 40px 0;
+}
+
+.vibe-section h2 {
+    font-size: 1rem; 
+    color: #3A2513;
+    margin-bottom: 20px;
+}
+
+.vibe-grid {
+    display: flex;
+    flex-wrap: wrap; /* 允許換行 */
+    gap: 20px; 
+}
+
+/* Vibe 項目樣式 */
+.vibe-item {
+    flex: 1 1 calc(33.333% - 20px); /* 三列佈局，減去間距 */
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.vibe-item:hover {
+    transform: translateY(-5px);
+}
+
+.vibe-item img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; /* 確保圖片覆蓋 */
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .vibe-item {
+        flex: 1 1 calc(50% - 20px); /* 在平板上顯示兩列 */
+    }
+}
+
+@media (max-width: 480px) {
+    .vibe-item {
+        flex: 1 1 100%; /* 在手機上顯示一列 */
+    }
 }

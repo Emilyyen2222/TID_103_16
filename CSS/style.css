@@ -1269,20 +1269,6 @@ footer .footer-links a:hover {
     /* padding: 0 0px; */
 }
 
-.map-container {
-    width: 400px;
-    flex-shrink: 0;
-    position: sticky;
-    top: 100px;
-    height: calc(100vh - 120px);
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-}
-
 /* 新的訂閱表單容器 */
 .subscribe-form {
     display: flex;
