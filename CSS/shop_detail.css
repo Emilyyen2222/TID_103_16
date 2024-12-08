@@ -1,3 +1,6 @@
+html {
+    font-size: clamp(1rem, 2vw, 3rem);
+}
 /* 店家詳情頁面基本樣式 */
 .shop-detail {
     max-width: 1200px;
@@ -23,18 +26,6 @@
     overflow: hidden;
 }
 
-/* 可以加入一個微妙的漸層效果 */
-.shop-info::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(249, 167, 38, 0.1), transparent);
-    z-index: 0;
-}
-
 /* 確保內容在漸層上方 */
 .shop-info > * {
     position: relative;
@@ -42,7 +33,7 @@
 }
 
 .shop-info h1 {
-    font-size: 32px;
+    font-size: 1.1rem;
     color: #3A2513;
     margin-bottom: 15px;
 }
@@ -92,12 +83,12 @@
 
 .stars {
     color: #F9A726;
-    font-size: 18px;
+    font-size: 0.5rem;
 }
 
 .rating-count {
     color: #666;
-    font-size: 14px;
+    font-size: 0.6rem;
 }
 
 .tags {
@@ -122,14 +113,14 @@
     font-size: 14px;
 }
 
-/* 操作按鈕區域 */
+
 .action-buttons {
     display: flex;
-    flex-direction: row; /* 確保水平排列 */
-    justify-content: flex-start; /* 從左開始排列 */
-    gap: 15px; /* 按鈕之間的間距 */
+    flex-direction: row; 
+    justify-content: flex-start; 
+    gap: 15px; 
     margin: 30px 0;
-    flex-wrap: nowrap; /* 防止按鈕換行 */
+    flex-wrap: nowrap;
 }
 
 .action-btn {
@@ -144,7 +135,7 @@
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
-    white-space: nowrap; /* 防止按鈕文字換行 */
+    white-space: nowrap; 
 }
 
 .action-btn i {
@@ -159,12 +150,12 @@
 /* 響應式設計 */
 @media (max-width: 768px) {
     .action-buttons {
-        overflow-x: auto; /* 在手機版可以橫向滾動 */
-        padding-bottom: 10px; /* 為滾動條留出空間 */
+        overflow-x: auto; 
+        padding-bottom: 10px; 
     }
     
     .action-btn {
-        flex-shrink: 0; /* 防止按鈕被壓縮 */
+        flex-shrink: 0; 
     }
 }
 
@@ -586,5 +577,5 @@ h1, h2, h3, h4, h5, h6 {
 /* 保持一些特殊狀態的顏色 */
 .review-actions button.active,
 .pagination .page-number.active {
-    color: white; /* 活動狀態保持白色 */
+    color: white; 
 }

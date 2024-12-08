@@ -72,7 +72,7 @@ body {
     font-weight: 500;
 }
 .nav-menu a:hover {
-    color: #F9A726;
+    color:  #FCDC94;
 }
 .nav-menu ul li:nth-of-type(4){
     margin-right: 8.6rem;
@@ -154,7 +154,7 @@ body {
 }
 
 .logo-container img {
-    height: clamp(32px, 10vw, 70px);
+    height: clamp(40px, 13vw, 70px);
     width: auto;
 }
 
@@ -1347,12 +1347,13 @@ footer .footer-links a:hover {
     display: none;
     flex-direction: column;
     cursor: pointer;
+
 }
 
 .bar {
     height: 3px;
     width: 25px;
-    background-color: #333;
+    background-color: #F9A726;
     margin: 4px 0;
 }
 .search_bar_rwdshow{
@@ -1444,6 +1445,7 @@ footer .footer-links a:hover {
         width: 50%; 
         z-index: 1000; 
         padding: 10px 0; 
+
     }
 
     .nav-menu ul {
@@ -1477,6 +1479,7 @@ footer .footer-links a:hover {
 @media (min-width: 1380px) {
     .menu-toggle {
         display: none; 
+        
     }
 
     .review-links {
@@ -1523,8 +1526,9 @@ footer .footer-links a:hover {
     border-radius: 8px;
     cursor: pointer;
     padding: 0;
-    color: #3A2513;
-    font-size: 1.1rem;
+    color: #FCDC94;
+    font-size: 1.8rem;
+    margin-top: 0.1rem;
     
 }
 
@@ -1535,7 +1539,5 @@ footer .footer-links a:hover {
     .left-side{
         display: none;
     }
-    
-
 }
 

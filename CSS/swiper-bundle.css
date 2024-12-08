@@ -19,7 +19,7 @@
 }
 /* FONT_END */
 :root {
-  --swiper-theme-color: orange;
+  --swiper-theme-color: #FCDC94;
   /*
   --swiper-preloader-color: var(--swiper-theme-color);
   --swiper-wrapper-transition-timing-function: initial;
@@ -316,7 +316,7 @@
   letter-spacing: 0;
   font-variant: initial;
   line-height: 1;
-  color: orange;
+  color: #FCDC94;
 }
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
