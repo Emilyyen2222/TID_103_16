@@ -1,15 +1,19 @@
 .review-section {
     max-width: 600px;
-    margin: 20px auto;
+    margin: 6rem auto;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #FCDC94;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: #FCDC94;
+    color: #3A2513;
+    font-size: 14px;
 }
 
 .review-section h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: #3A2513;
+    font-size: 24px;
 }
 
 .form-group {
@@ -19,6 +23,8 @@
 label {
     display: block;
     margin-bottom: 5px;
+    color: #3A2513;
+    font-size: 14px;
 }
 
 input[type="text"],
@@ -26,7 +32,7 @@ textarea,
 input[type="file"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #FCDC94;
     border-radius: 5px;
 }
 
@@ -36,17 +42,17 @@ input[type="file"] {
 }
 
 .rating-system input {
-    display: none; /* 隱藏原始的 radio 按鈕 */
+    display: none; 
 }
 
 .rating-system label {
-    font-size: 24px;
-    color: #ccc; /* 星星的顏色 */
+    font-size: 20px;
+    color: #3A2513;
     cursor: pointer;
 }
 
 .rating-system input:checked ~ label {
-    color: #f9a726; /* 選中的星星顏色 */
+    color: #f9a726; 
 }
 
 .submit-btn {
@@ -57,8 +63,16 @@ input[type="file"] {
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    font-size: 16px;
 }
 
 .submit-btn:hover {
     background-color: #e89615;
+}
+#review-text{
+    width: 80%;
+
+}
+#dessert-name {
+    width: 80%;
 }

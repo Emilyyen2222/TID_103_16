@@ -1536,7 +1536,7 @@ footer .footer-links a:hover {
     align-items: center;
     background-color: #fce3a8;
     border-radius: 8px;
-    border: 2px solid #F9A726;
+    border: 2px solid #fce3a8;
     cursor: pointer;
     padding: 0;
     color: #F9A726;
@@ -1545,7 +1545,7 @@ footer .footer-links a:hover {
     
 }
 .login_avatar:hover {
-    background-color: #FCDC94; 
+    background-color: #fce3a8; 
     color: white; 
     transform: scale(1.05); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
