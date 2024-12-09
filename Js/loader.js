@@ -7,5 +7,5 @@ window.onload = function() {
         loader.style.display = 'none'; 
         // content.style.display = 'block'; 
         body.style.overflow='hidden';
-    }, 2500); 
+    }, 2000); 
 };
